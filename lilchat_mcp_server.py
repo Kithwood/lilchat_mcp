@@ -26,7 +26,6 @@ logger = logging.getLogger("lilchat-mcp")
 
 # Default configuration (override with environment variables)
 # This env var is required for new ui to work, so we can rely on it here
-LC_SITE_URL = os.environ.get("LC_SITE_URL", "http://localhost")
 DEFAULT_VERIFY_SSL = os.environ.get("LC_VERIFY_SSL", "True").lower() == "true"
 
 # Create MCP server application
