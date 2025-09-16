@@ -119,6 +119,14 @@ async def get_lilchat_webdata(ctx: Context, url: str = "") -> str:
     # for large sets of data this can produce an error as the string is longer than the transport can handle
     return lc_webdata
 
+@app.tool()
+async def search(query: str):
+    return {"Hello": "World"}
+
+@app.tool()
+async def fetch(id: str):
+    return "10"
+
 async def main():
     """Main function to run the MCP server."""
     logger.info("Starting lilchat MCP Server...")
