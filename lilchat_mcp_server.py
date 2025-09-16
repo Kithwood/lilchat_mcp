@@ -122,7 +122,7 @@ async def get_lilchat_webdata(ctx: Context, url: str = "") -> str:
 async def main():
     """Main function to run the MCP server."""
     logger.info("Starting lilchat MCP Server...")
-    await app.run_async(transport="streamable-http", host="0.0.0.0", port=9142, log_level="debug")
+    await app.run_async(transport="streamable-http", host="lilchatmcp.onreader.com", log_level="debug")
 
 if __name__ == "__main__":
     asyncio.run(main())
