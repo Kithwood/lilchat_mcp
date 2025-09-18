@@ -130,7 +130,7 @@ async def fetch(id: str):
 async def main():
     """Main function to run the MCP server."""
     logger.info("Starting lilchat MCP Server...")
-    await app.run_async(transport="http", host="0.0.0.0", port=5000, log_level="debug", path="mcp")
+    await app.run_async(transport="http", host="0.0.0.0", port=5000, log_level="debug", path="/mcp")
 
 if __name__ == "__main__":
     asyncio.run(main())
