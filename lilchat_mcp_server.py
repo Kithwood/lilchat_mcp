@@ -30,7 +30,7 @@ DEFAULT_VERIFY_SSL = os.environ.get("LC_VERIFY_SSL", "True").lower() == "true"
 
 # Create MCP server application
 app = FastMCP(
-    name="lilchat-server",
+    name="lilchatMCPserver",
     instructions="When you are asked to get lilchat webdata, call get_lilchat_webdata()",
 )
 
@@ -110,13 +110,6 @@ def get_lilchat_webdata(ctx: Context, url: str = "") -> str:
     # for large sets of data this can produce an error as the string is longer than the transport can handle
     return lc_webdata
 
-@app.tool()
-def search(query: str):
-    return {"Hello": "World"}
-
-@app.tool()
-def fetch(id: str):
-    return "10"
 
 def main():
     """Main function to run the MCP server."""
